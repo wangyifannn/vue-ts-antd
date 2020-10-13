@@ -109,57 +109,60 @@ export const asyncRoutes: RouteConfig[] = [
       }
     ]
   },
-  // {
-  //   path: '/computers',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/computers/index.vue'),
-  //       name: 'Tab',
-  //       meta: {
-  //         title: '计算管理',
-  //         icon: 'tab'
-  //       }
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/member',
-  //   component: Layout,
-  //   meta: {
-  //     title: '人员管理',
-  //     roles: ['admin'] ,
-  //     icon: 'tab'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/member/index.vue'),
-  //       name: 'Tab',
-  //       meta: {
-  //         title: '人员管理',
-  //         roles: ['admin'] ,
-  //         icon: 'tab'
-  //       }
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/project',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/project/index.vue'),
-  //       name: 'Tab',
-  //       meta: {
-  //         title: '项目管理',
-  //         icon: 'tab'
-  //       }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/computers',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/computers/index.vue'),
+        name: 'Tab',
+        meta: {
+          title: '计算管理',
+          icon: 'tab'
+        }
+      }
+    ]
+  },
+  {
+    path: '/member',
+    component: Layout,
+    meta: {
+      title: '人员管理',
+      roles: ['admin'] ,
+      icon: 'tab'
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/member/index.vue'),
+        name: 'Tab',
+        meta: {
+          title: '人员管理',
+          roles: ['admin'] ,
+          icon: 'tab'
+        }
+      }
+    ]
+  },
+  {
+    path: '/project',
+    meta: {
+      roles: ['admin'] ,
+    },
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/project/index.vue'),
+        name: 'Tab',
+        meta: {
+          title: '项目管理',
+          icon: 'tab'
+        }
+      }
+    ]
+  },
   {
     path: '*',
     redirect: '/404',

@@ -14,19 +14,20 @@
       <a-dropdown
         class="avatar-container right-menu-item hover-effect"
       >
-        <div class="avatar-wrapper">
+        <div>
           <img
             :src="avatar+'?imageView2/1/w/80/h/80'"
             class="user-avatar"
           >
-          <i class="el-icon-caret-bottom" />
+          <a-icon type="down" />
         </div>
         <a-menu slot="overlay">
-          <router-link to="/">
-            <a-menu-item>
-              修改密码
-            </a-menu-item>
-          </router-link>
+          <a-menu-item>
+            <!-- TODO: 失效 -->
+            <router-link to="/">
+                修改密码
+            </router-link>
+          </a-menu-item>
           <a-menu-item
             divided
             @click.native="logout"
@@ -142,16 +143,12 @@ export default class extends Vue {
 
     .avatar-container {
       margin-right: 30px;
-
-      .avatar-wrapper {
-        margin-top: 5px;
-        position: relative;
-
         .user-avatar {
           cursor: pointer;
           width: 40px;
           height: 40px;
           border-radius: 10px;
+          margin-right:4px;
         }
 
         .el-icon-caret-bottom {
@@ -161,7 +158,6 @@ export default class extends Vue {
           top: 25px;
           font-size: 12px;
         }
-      }
     }
   }
 }

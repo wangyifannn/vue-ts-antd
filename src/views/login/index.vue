@@ -200,9 +200,9 @@ export default class extends Vue {
             query: this.otherQuery
           })
         })
-        .catch((err) => {
-          console.log(err)
-        })
+          .catch((err) => {
+            console.log(err)
+          })
         // Just to simulate the time of the request
         setTimeout(() => {
           this.loading = false
